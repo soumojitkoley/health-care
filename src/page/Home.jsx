@@ -31,7 +31,7 @@ const Home = () => {
           <p className='hi-p'>Our state-of-the-art laboratory conducts comprehensive tests, providing precise and prompt results vital for diagnosing and managing various medical conditions.</p>
         </div>
       </div>
-      <Footer id={'ft'} />
+      <Footer/>
     </div>
   )
 }

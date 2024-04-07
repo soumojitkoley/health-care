@@ -66,12 +66,13 @@
 
 .link {
   text-decoration: none;
-  color: rgb(126, 125, 125);
+  color: #a6a4a4;
+  transition: all 0.4s ease;
 }
 
 .link:hover,
 .active {
-  color: #d0cbcb;
+  color: rgb(53, 53, 53);
 }
 
 .auth-btns {

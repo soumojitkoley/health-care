@@ -1,0 +1,123 @@
+.footer-div {
+  width: 100%;
+  height: auto;
+  color: #fff;
+  padding: 5em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://images.pexels.com/photos/2324837/pexels-photo-2324837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+}
+
+.footer-upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-lower {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-heading {
+  font-size: 18px;
+  color: #777777;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.footer-desc {
+  font-size: 14px;
+  color: #CCCCCC;
+}
+
+.footer-heading:hover {
+  color: #CCCCCC;
+  transition: 0.3s ease;
+}
+
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.part {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.address,
+.location {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+}
+
+.hovered {
+  transition: all 0.3s ease-in;
+  transform: scale(1.2);
+}
+
+.about-big-p {
+  width: 25em;
+  text-align: left;
+}
+
+.social-links {
+  display: flex;
+  gap: 1em;
+
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-div {
+    justify-content: center;
+    align-items: center;
+    background-attachment: scroll;
+  }
+
+  .about-big-p {
+    width: 15em;
+    text-align:center;
+    padding: 1em;
+  }
+
+  .footer-upper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    text-align: center;
+
+  }
+
+  .address,
+  .location {
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .footer-lower {
+    flex-direction: column;
+    gap: 3em;
+  }
+}
+
+@media only screen and (max-width: 1025px) and (orientation: landscape) {
+  .about-big-p {
+    width: 14em;
+    text-align:left;
+    /* padding: 1em; */
+  }
+}
