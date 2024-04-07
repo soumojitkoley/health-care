@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5em;
+  margin-top: 6em;
 }
 .home-header{
   width: 95%;
@@ -37,6 +37,8 @@
 .home-info{
   width: 95%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1em 0em;
   gap:1em;
 }
@@ -78,3 +80,17 @@
   background-color: #180bd1;
 }
 
+@media only screen and (max-width: 760px) {
+  .home-main-div{
+    margin-top: 1em;
+  }
+
+  .home-header h1{
+    font-size: 4em;
+    padding-left: 0.5em;
+  }
+
+  .home-info{
+    flex-direction: column;
+  }
+}

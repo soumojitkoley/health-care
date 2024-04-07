@@ -68,44 +68,6 @@ const Footer = () => {
       </div>
       <div className="footer-lower">
         <Fade direction='up' delay={500}><p className='footer-desc'>© 2024 HealthCare Ltd.</p></Fade>
-        <div className="social-links">
-          <Fade direction='up' delay={500}>
-            <FaFacebook
-              onMouseEnter={() => handleMouseEnter('fb')}
-              size={30}
-              onMouseLeave={handleMouseLeave}
-              style={{ color: hoveredIcon === 'fb' ? '#316FF6' : '#777' }}
-              className={hoveredIcon === 'fb' ? 'hovered' : 'sl'}
-            />
-          </Fade>
-          <Fade direction='up' delay={500}>
-            <FaInstagram
-              onMouseEnter={() => handleMouseEnter('insta')}
-              size={30}
-              onMouseLeave={handleMouseLeave}
-              style={{ color: hoveredIcon === 'insta' ? 'rgb(255, 0, 85)' : '#777' }}
-              className={hoveredIcon === 'insta' ? 'hovered insta' : 'sl'}
-            />
-          </Fade>
-          <Fade direction='up' delay={500}>
-            <FaXTwitter
-              onMouseEnter={() => handleMouseEnter('x')}
-              size={30}
-              onMouseLeave={handleMouseLeave}
-              style={{ color: hoveredIcon === 'x' ? '#141414' : '#777' }}
-              className={hoveredIcon === 'x' ? 'hovered' : 'sl'}
-            />
-          </Fade>
-          <Fade direction='up' delay={500}>
-            <FaYoutube
-              onMouseEnter={() => handleMouseEnter('yt')}
-              size={30}
-              onMouseLeave={handleMouseLeave}
-              style={{ color: hoveredIcon === 'yt' ? 'red' : '#777' }}
-              className={hoveredIcon === 'yt' ? 'hovered' : 'sl'}
-            />
-          </Fade>
-        </div>
       </div>
     </div>
   )

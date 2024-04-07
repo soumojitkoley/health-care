@@ -1,17 +1,31 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { useMediaQuery } from 'react-responsive';
 import './Home.css'
 
 const Home = () => {
+  const isMobile = useMediaQuery({ maxWidth: 700 });
   return (
+    <>
+    <Navbar />
     <div className='home-main-div'>
-      <Navbar />
       <div className="home-header">
-        {/* <h1 className=''>Welcome to <span className='blue'>Health</span><span className='green'>Care</span></h1> */}
-        <h1>One Stop Solution For</h1>
-        <h1>All Medical Needs</h1>
-        {/* <img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?q=80&w=1791&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /> */}
+        {
+          !isMobile ? (
+            <>
+              <h1>One Stop Solution For</h1>
+              <h1>All Medical Needs</h1>
+            </>
+          )
+          :
+          (
+            <>
+            <h1>One Stop Solution For All</h1>
+            <h1>Medical Needs</h1>
+          </>
+          )
+        }
       </div>
       <div className="home-info">
         <div className="hi hi-1">
@@ -33,6 +47,7 @@ const Home = () => {
       </div>
       <Footer/>
     </div>
+    </>
   )
 }
 
