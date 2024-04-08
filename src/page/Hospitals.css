@@ -1,4 +1,4 @@
-.hospitals-div{
+.hospitals-div {
   margin-top: 5em;
   margin-bottom: 3em;
   display: flex;
@@ -6,7 +6,7 @@
   gap: 2em;
 }
 
-.search-part{
+.search-part {
   display: flex;
   position: fixed;
   justify-content: center;
@@ -17,108 +17,126 @@
   background-color: #ffffff;
 }
 
-.search-part input{
+.search-part input {
   position: fixed;
   z-index: 999;
-  top:7em;
-  left: 10em;
+  top: 7em;
+  left: 18em;
   width: 40%;
   padding: 1.3em;
   border-radius: 25px;
+  border: 2px solid #00b4d8;
 }
 
-select{
+select {
   position: fixed;
-  right: 10em;
+  right: 18em;
   width: 10em;
   padding: 1em;
   border-radius: 25px;
   font-size: 1em;
+  border: 2px solid #00b4d8;
+  background-color: #fff;
 }
 
-option{
+select:valid {
+  border-color: #00b4d8;
+}
+
+select.minimal:focus,
+input:focus {
+  border-color: #00b4d8;
+  outline: 0;
+}
+
+option {
   font-size: large;
 }
 
-
-.no-result{
+.no-result {
   width: 100%;
   height: 20em;
+  margin-top: 6em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.no-result img{
+.no-result img {
   width: 10%;
 }
 
-.hospital-data{
+.hospital-data {
   margin-top: 7em;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap:2em;
+  gap: 1em;
   justify-content: center;
   align-items: center;
 }
 
-.each-hospital{
+.each-hospital {
   display: flex;
   flex-direction: column;
-  width: 30em;
+  width: 25em;
   background-color: #00b4d8;
   padding: 1em;
-  height: 15em;
+  height: 15.5em;
   border-radius: 15px;
   transition: all 0.5s ease;
   color: #fff;
 }
 
-.each-hospital:hover{
+.each-hospital:hover {
   transform: scale(1.05);
 }
 
+.icon{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap:0.2em;
+}
+
+.each-hospital img{
+  width: 18px;
+}
+
 @media only screen and (max-width: 760px) {
-
-  .hospitals-div{
-    margin-top: 1.5em;
+  .hospitals-div {
+    margin-top: 6em;
   }
-
-  .search-part{
+  .search-part {
     height: 2em;
-    position: relative;;
+    position: relative;
+    ;
   }
-  
 
-  .no-result img{
+  .no-result img {
     width: 40%;
   }
 
-  .hospital-data{
+  .hospital-data {
     margin-top: 0em;
     height: 70vh;
     overflow: scroll;
   }
 
-  .each-hospital{
+  .each-hospital {
     width: 22em;
     height: auto;
   }
 
-  
-.search-part input{
-  left: -1em;
-  position: relative;
-  top:0;
-}
-
-  
-select{
-  right: -1em;
-  position: relative;
-  top:0;
-}
-
+  .search-part input {
+    left: -1em;
+    position: relative;
+    top: 0;
+  }
+  select {
+    right: -1em;
+    position: relative;
+    top: 0;
+  }
 }

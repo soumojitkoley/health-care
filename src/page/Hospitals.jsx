@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
-import { IoMdSearch } from 'react-icons/io';
+import { FcApproval } from "react-icons/fc";
 import data from '../data/hospitalDetails.js';
 import './Hospitals.css';
 import Footer from '../components/Footer.jsx';
@@ -45,13 +45,15 @@ const Hospitals = () => {
       <div className="hospitals-div">
         <div className="search-part">
           <input onChange={changeHandler} type="text" placeholder="Enter your pincode to get nearby hospitals" name="" id="" />
-          <select value={selectedOption} onChange={handleChange}>
+          <select class="minimal" value={selectedOption} onChange={handleChange}>
             <option value="All">All</option>
-            <option value="multispeciality">Multispeciality</option>
-            <option value="eye">Eye</option>
-            <option value="heart">Heart</option>
-            <option value="ortho">Ortho</option>
-            <option value="diabetes">Diabetes</option>
+            <option value="Multispeciality">Multispeciality</option>
+            <option value="Eye">Eye</option>
+            <option value="Heart">Heart</option>
+            <option value="Orthopaedics">Orthopaedics</option>
+            <option value="Cancer">Cancer</option>
+            <option value="Diabetes">Diabetes</option>
+            <option value="ENT">Ent</option>
           </select>
         </div>
         <div className="result-part">
@@ -64,13 +66,11 @@ const Hospitals = () => {
             <div className="hospital-data">
               {hos.map((h, idx) => (
                 <div key={idx} className="each-hospital">
-                  <h2>{h.name}</h2>
-                  <h3>{h.type}</h3>
-                  <h4>
-                    {h.city}, {h.district}
-                  </h4>
-                  <h4>{h.pincode}</h4>
-                  <p>{h.address}</p>
+                  <h2>{h.name}<FcApproval size={20} /></h2>
+                  <h3 className='icon'><img src="/images/star.png" alt="" />Type : {h.type}</h3>
+                  <h4 className='icon'><img src="/images/skyscraper.png" alt="" />City : <b>{h.city}</b>, District : {h.district}</h4>
+                  <p className='icon'><img src="/images/placeholder.png" alt="" />Pincode : <b>{h.pincode}</b></p>
+                  <p><img src="/images/google-maps.png" alt="" />Address : <b>{h.address}</b></p>
                 </div>
               ))}
             </div>

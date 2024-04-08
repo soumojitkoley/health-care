@@ -5,9 +5,10 @@
   align-items: center;
   margin-top: 6em;
 }
+
 .home-header{
   width: 95%;
-  height: 70vh;
+  height: 80vh;
   border-radius: 15px;
   overflow: hidden;
   position: relative;
@@ -82,15 +83,16 @@
 
 .about-part{
   color: #fff;
-  height: 500px;
+  height: auto;
   padding: 2em 1em;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1612776572997-76cc42e058c3?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  gap:3em;
+  gap:2em;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -105,10 +107,126 @@
   padding: 0em 5em;
 }
 
+.service-part{
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.services button {
+  --primary-color: #645bff;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+}
+
+.services button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services button .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+.services button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+.services button:hover {
+  background-color: var(--hover-color);
+}
+
+.services button:hover .arrow {
+  background: var(--secondary-color);
+}
+
+.services button:hover .arrow:before {
+  right: 0;
+}
+
+.service-doctor{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:1em;
+  padding: 4em 3em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position:var(--primary-color);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.service-doctor p,
+.service-hospital p{
+  padding: 0em 2em;
+}
+
+.service-hospital{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:1em;
+  padding: 4em 3em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.none{
+  text-decoration: none;
+  color: #fff;
+}
+
+
 @media only screen and (max-width: 760px) {
-  .home-main-div{
-    margin-top: 1em;
-  }
 
   .home-header h1{
     font-size: 4em;
@@ -129,11 +247,21 @@
   }
 
   .about-part{
-    height: 1000px;
+    background-attachment: scroll;
   }
 
   .about-part p{
     font-size: large;
     padding: 0em 1.5em;
+  }
+
+  .services{
+    flex-direction: column;
+  }
+
+  .service-doctor,
+  .service-hospital{
+    width: 100%;
+    background-attachment: scroll;
   }
 }

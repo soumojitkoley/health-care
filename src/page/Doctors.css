@@ -67,10 +67,6 @@
 }
 
 @media only screen and (max-width: 760px) {
-  .doctor-div{
-    margin-top: 1em;
-  }
-
   .filter-part{
     height: 11em;
     overflow: scroll;
