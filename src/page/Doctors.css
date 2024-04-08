@@ -13,7 +13,8 @@
 
 .each-filter{
   width: 11em;
-  background-color: aqua;
+  background-color: rgb(7, 197, 197);
+  color: #fff;
   display: flex;
   flex-direction: column;
   gap:0.5em;
@@ -61,9 +62,13 @@
   gap:0.2em;
 }
 
+.each-doctor img{
+  width: 18px;
+}
+
 @media only screen and (max-width: 760px) {
   .doctor-div{
-    margin-top: 1.5em;
+    margin-top: 1em;
   }
 
   .filter-part{

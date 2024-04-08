@@ -1,8 +1,8 @@
 import React from 'react'
 import './Footer.css'
 import { FaLocationDot, FaHouse, FaFacebook, FaInstagram, FaXTwitter, FaYoutube } from "react-icons/fa6";
-import { useMediaQuery } from 'react-responsive';
 import { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { Fade } from 'react-awesome-reveal';
 
 const Footer = () => {
@@ -13,11 +13,10 @@ const Footer = () => {
   const handleMouseLeave = () => {
     setHoveredIcon(null);
   };
-
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
   return (
-    <div className='footer-div' id='ft'>
+    <div className='footer-div'  id='ft'>
       <div className="footer-upper">
         <div className="part part1">
           <Fade direction='up'><p className='footer-heading'>About HealthCare</p></Fade>
@@ -49,7 +48,7 @@ const Footer = () => {
                 />
               </Fade>
             ) : (<></>)}
-            <Fade direction='up' delay={500}><p className='footer-desc'>IT & VFX</p></Fade>
+            <Fade direction='up' delay={500}><p className='footer-desc'>HealthCare</p></Fade>
           </div>
           <div className="location">
             {!isMobile ? (

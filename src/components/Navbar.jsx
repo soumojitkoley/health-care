@@ -15,27 +15,26 @@ const Navbar = (props) => {
     setMenuOpen(!isMenuOpen);
   };
 
-  function scrollHandler() {
-    locomotiveScroll.scrollTo('#ft')
+  function scrollHandler(scrollTarget) {
+    if(scrollTarget == '') {
+      locomotiveScroll.scrollTo(0, 0)
+    }
+    else{
+      locomotiveScroll.scrollTo(scrollTarget)
+    }
   }
 
   return (
     <div className="navbar">
-      {/* <div className="logo"> */}
-      {/* <img src="https://www.practostatic.com/nav/9.5.18/consumer/images/practo.svg" alt="" /> */}
       <h1 className='navbar-h1'><span className='blue'>Health</span><span className='green'>Care</span></h1>
-      {/* </div> */}
-
       {isMobile ? (
         <div className='hello'>
-
           <label class="burger" for="burger">
             <input type="checkbox" checked={isMenuOpen} readOnly onClick={handleMenuToggle} id="burger" />
             <span></span>
             <span></span>
             <span></span>
           </label>
-
           <AnimatePresence>
             {isMenuOpen && (
               <motion.div key={isMenuOpen ? 'menu-open' : 'menu-closed'} className={'fullnav-mob'} data-visible="true"
@@ -71,7 +70,7 @@ const Navbar = (props) => {
         <div className="nav-menu">
           <ul type="none" className="list">
             <li>
-              <NavLink to="/" className="link">
+              <NavLink onClick={() => scrollHandler('')} to="/" className="link">
                 Home
               </NavLink>
             </li>
@@ -91,9 +90,14 @@ const Navbar = (props) => {
               </NavLink>
             </li>
             <li>
-              <NavLink to='/contact' className="link">
-                Contact
+              <NavLink to="/hospitals" className="link">
+                Hospitals
               </NavLink>
+            </li>
+            <li>
+              <a onClick={() => scrollHandler('#ft')} className="link">
+                Contact
+              </a>
             </li>
           </ul>
         </div>
