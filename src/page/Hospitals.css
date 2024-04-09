@@ -139,4 +139,8 @@ option {
     position: relative;
     top: 0;
   }
+
+  .each-hospital img{
+    width: 16px;
+  }
 }

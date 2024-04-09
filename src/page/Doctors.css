@@ -1,8 +1,8 @@
-.doctor-div{
+.doctor-div {
   margin-top: 6em;
 }
 
-.filter-part{
+.filter-part {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -11,13 +11,13 @@
   gap: 1em;
 }
 
-.each-filter{
+.each-filter {
   width: 11em;
   background-color: rgb(7, 197, 197);
   color: #fff;
   display: flex;
   flex-direction: column;
-  gap:0.5em;
+  gap: 0.5em;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
@@ -26,26 +26,26 @@
 }
 
 .each-filter:hover,
-.each-doctor:hover{
+.each-doctor:hover {
   transform: scale(1.05);
 }
 
-.each-filter img{
+.each-filter img {
   height: 50%;
   width: 50%;
 }
 
-.each-doctor-part{
+.each-doctor-part {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap:1em;
+  gap: 1em;
   margin: 2em 0em;
 }
 
-.each-doctor{
+.each-doctor {
   background-color: #00b4d8;
   color: #fff;
   width: 22em;
@@ -55,34 +55,38 @@
   transition: all 0.5s ease;
 }
 
-.icon{
+.icon {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap:0.2em;
+  gap: 0.2em;
 }
 
-.each-doctor img{
+.each-doctor img {
   width: 18px;
 }
 
 @media only screen and (max-width: 760px) {
-  .filter-part{
+  .filter-part {
     height: 11em;
     overflow: scroll;
   }
 
-  .each-doctor-part{
+  .each-doctor-part {
     height: 55vh;
     overflow: scroll;
   }
 
-  .each-doctor{
+  .each-doctor {
     height: auto;
   }
 
   .each-filter:hover,
-  .each-doctor:hover{
-  transform:none
-}
+  .each-doctor:hover {
+    transform: none
+  }
+
+  .each-doctor img {
+    width: 16px;
+  }
 }

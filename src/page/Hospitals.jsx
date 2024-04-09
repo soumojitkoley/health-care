@@ -68,7 +68,8 @@ const Hospitals = () => {
                 <div key={idx} className="each-hospital">
                   <h2>{h.name}<FcApproval size={20} /></h2>
                   <h3 className='icon'><img src="/images/star.png" alt="" />Type : {h.type}</h3>
-                  <h4 className='icon'><img src="/images/skyscraper.png" alt="" />City : <b>{h.city}</b>, District : {h.district}</h4>
+                  <h4 className='icon'><img src="/images/skyscraper.png" alt="" />City : {h.city}</h4>
+                  <h4 className='icon'><img src="/images/electoral.png" alt="" />District : {h.district}</h4>
                   <p className='icon'><img src="/images/placeholder.png" alt="" />Pincode : <b>{h.pincode}</b></p>
                   <p><img src="/images/google-maps.png" alt="" />Address : <b>{h.address}</b></p>
                 </div>
