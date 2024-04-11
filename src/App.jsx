@@ -11,17 +11,17 @@ function App() {
   const location = useLocation()
 
   useEffect(() => {
-    locomotiveScroll.scrollTo(0,0)
+    locomotiveScroll.scrollTo(0, 0)
   }, [location.pathname])
 
   return (
     <>
       <Routes className=''>
-        <Route path='/' element={<Outlet/>}>
-          <Route index element={<Home/>}/>
-          <Route path='/doctors' element={<Doctors/>}/>
-          <Route path='/hospitals' element={<Hospitals/>}/>
-          <Route path='*' element={<div>error</div>}/>
+        <Route path='/' element={<Outlet />}>
+          <Route index element={<Home />} />
+          <Route path='/doctors' element={<Doctors />} />
+          <Route path='/hospitals' element={<Hospitals />} />
+          <Route path='*' element={<div>error</div>} />
         </Route>
       </Routes>
     </>
