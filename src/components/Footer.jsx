@@ -22,7 +22,7 @@ const Footer = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
   useEffect(() => {
-    if (location.pathname == '/doctors' || location.pathname == '/hospitals') {
+    if (location.pathname == '/doctors' || location.pathname == '/hospitals' || location.pathname == '/blood-bank') {
       setPath(true)
     }
   }, [location.pathname])
@@ -98,9 +98,9 @@ const Footer = () => {
               </NavLink>
             </Fade>
             <Fade direction='up' delay={500}>
-              <a onClick={() => { scrollHandler('#ft') }} className='footer-desc'>
-                Contact
-              </a>
+              <NavLink to="/blood-bank" className='footer-desc'>
+                Blood Bank
+              </NavLink>
             </Fade>
           </div>
         </div>
@@ -117,7 +117,7 @@ const Footer = () => {
                 />
               </Fade>
             ) : (<></>)}
-            <Fade direction='up' delay={500}><p className='footer-desc'>HealthCare</p></Fade>
+            <Fade direction='up' delay={500}><p className='footer-desc'>HealthCare +917439685530 </p></Fade>
           </div>
           <div className="location">
             {!isMobile ? (
@@ -130,7 +130,7 @@ const Footer = () => {
                 />
               </Fade>
             ) : (<></>)}
-            <Fade direction='up' delay={500}><p className='footer-desc'>Kolkata, North 24 Parganas, West Bengal,<br /> Kolkata - 700123</p></Fade>
+            <Fade direction='up' delay={500}><p className='footer-desc'>Kolkata, North 24 Parganas, West Bengal,<br /> Kolkata - 700124</p></Fade>
           </div>
         </div>
       </div>

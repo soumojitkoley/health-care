@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    if (location.pathname == '/doctors' || location.pathname == '/hospitals') {
+    if (location.pathname == '/doctors' || location.pathname == '/hospitals' || location.pathname == '/blood-bank') {
       setPath(true)
     }
   }, [location.pathname])
@@ -103,6 +103,11 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
+                      <NavLink onClick={handleMenuToggle} to="/blood-bank" className="link">
+                        Blood Bank
+                      </NavLink>
+                    </li>
+                    <li>
                       <a onClick={() => { scrollHandler('#ft'), handleMenuToggle() }} className="link">
                         Contact
                       </a>
@@ -151,6 +156,11 @@ const Navbar = () => {
             <li>
               <NavLink to="/hospitals" className="link">
                 Hospitals
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/blood-bank" className="link">
+                Blood Bank
               </NavLink>
             </li>
             <li>

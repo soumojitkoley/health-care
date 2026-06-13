@@ -11,6 +11,7 @@ const locomotiveScroll = new LocomotiveScroll();
 const Doctors = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const [doc, setDoc] = useState(data)
+  
   function changeType(type) {
     if(isMobile) {
       locomotiveScroll.scrollTo(0, 0)

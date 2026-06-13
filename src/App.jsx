@@ -1,6 +1,7 @@
 import Home from './page/Home'
 import Doctors from './page/Doctors'
 import Hospitals from './page/Hospitals'
+import BloodBank from './page/BloodBank'
 import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import LocomotiveScroll from 'locomotive-scroll'
@@ -21,6 +22,7 @@ function App() {
           <Route index element={<Home/>}/>
           <Route path='/doctors' element={<Doctors/>}/>
           <Route path='/hospitals' element={<Hospitals/>}/>
+          <Route path='/blood-bank' element={<BloodBank/>}/>
           <Route path='*' element={<div>error</div>}/>
         </Route>
       </Routes>
